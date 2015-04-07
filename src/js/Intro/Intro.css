@@ -1,0 +1,13 @@
+.Intro {
+  background: rgba(0,0,0,0.12);
+  padding: 10px;
+  z-index: 200;
+  
+}
+@media all and (min-width: 600px){
+  .Intro {
+    margin: 0 auto;
+    max-width: 500px;
+    font-size: 14px;
+  }
+}

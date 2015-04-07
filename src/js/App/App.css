@@ -1,0 +1,53 @@
+.App {
+	width: 100%;
+	position: relative;
+	max-width: 1000px;
+	margin: 0 auto;
+	
+}
+@media screen and (min-width: 600px){
+    .App {   
+	   text-align: center;
+    }
+    .App-block {
+		margin-top: 50px;
+    }
+}
+.App-title {
+	font-size: 30px;
+	font-weight: 800;
+}
+.App-progress {
+	position: absolute;
+	left: 0;
+	top: -20px;
+}
+@media screen and (min-width: 600px){
+	.App-progress {
+		position: relative;
+	}
+
+}
+.App-billVersions {
+	text-align: left;
+	display: flex;
+	margin-left: 60px;
+}
+.App-billVersion {
+	flex: 1;
+}
+@media screen and (min-width: 600px){
+	.App-billVersions {
+	   display: block;
+	}
+	.App-billVersion {
+		flex: none;
+	}
+}
+
+.App-update {
+	font-size: 14px;
+	width: 100%;
+	text-align: center;
+	padding: 10px;
+}

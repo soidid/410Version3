@@ -1,0 +1,96 @@
+.Hintpoint {
+  position: absolute;
+  z-index: 100;
+}
+
+.Hintpoint-info {
+  top: 40px;
+  left: -10px;
+  width: 120px;
+  position: absolute;
+  padding: 10px;
+  background: rgba(100,100,100,0.9);
+  color: white;
+}/*
+.Hintpoint-info {
+  position: absolute;
+  width:140px;
+  color: #FFFFFF;
+  background: #000000;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  visibility: hidden;
+  border-radius: 6px;
+}*/
+.Hintpoint-info:after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 20px;
+  margin-left: -8px;
+  width: 0; height: 0;
+  border-bottom: 8px solid rgba(100,100,100,0.9);
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+
+/* base style */
+.Hintpoint-hinter {
+  cursor: pointer;
+  transition: all 0.6s ease-in-out;
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  
+}
+.Hintpoint-hinter:before, .Hintpoint-hinter:after {
+  border-radius: 100%;
+  box-shadow: 0 0 5px rgba(0,0,0,.3);
+  content: '';
+  display: block;
+  position: absolute;
+
+}
+
+.Hintpoint-hinter:before {
+  
+  border: 2px solid rgba(255,255,255,.8);
+  height: 16px;
+  width: 16px;
+
+  -webkit-animation: bounce 1.0s infinite; /* Safari 4+ */
+  -moz-animation:    bounce 1.0s infinite; /* Fx 5+ */
+  -o-animation:      bounce 1.0s infinite; /* Opera 12+ */
+  animation:         bounce 1.0s infinite; /* IE 10+, Fx 29+ */
+}
+
+.Hintpoint-hinter:after {
+  background: rgba(255,255,255,.8);
+  left: 50%;
+  top: 50%;
+
+  margin: -6px 0 0 -6px;
+  height: 12px;
+  width: 12px;
+
+}
+/*
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
+}*/
+@-webkit-keyframes bounce {
+  0%, 100% {
+    border-color: #FFF;
+    margin: -10%;
+    padding: 10%;
+
+  }
+  50% {
+    border-color: rgba(255,255,255,.6);
+    padding: 0;
+    margin: 0;
+  }
+}

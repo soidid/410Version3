@@ -1,0 +1,384 @@
+.Progress {
+	text-align: left;
+	padding: 80px 0px 0px 0px;/* 80px 是預留給版本名稱的空間 */
+    max-width: 100%;
+    margin: 0 auto;
+    width: 10px;
+}
+@media screen and (min-width: 600px){
+    .Progress {
+        padding: 10px 10px 20px 80px;/* 80px 是預留給版本名稱的空間 */
+        width: auto;
+    }
+}
+
+.Progress-title {
+	font-size: 30px;
+	font-weight: 800;
+}
+
+.Progress-bricks {
+	display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+	
+	
+	-webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-box-direction: vertical;
+    -moz-box-direction: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+	flex-direction: column;
+	margin-top: 10px;
+	margin-left: 18px;
+	border-left: 1px solid rgb(220,220,220);
+}
+.Progress-item {
+	display: inline-block;
+	vertical-align: top;
+	padding: 0 5px;
+
+	-webkit-box-flex: 1;   /* OLD - iOS 6-, Safari 3.1-6 */
+    -webkit-flex: 1;       /* Safari 6.1+. iOS 7.1+, BB10 */
+    -ms-flex: 1;           /* IE 10 */
+    flex: 1;               /* NEW, Spec - Firefox, Chrome, Opera */
+	
+	margin-top: 30px;
+	position: relative;
+}
+@media all and (min-width: 600px){
+	.Progress-bricks {
+        margin-left: 0px;
+        border-left: none;
+
+        -webkit-box-orient: horizontal;
+        -moz-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -moz-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+	}
+	.Progress-item {
+		min-width: 100px;
+		display: inline-block;
+        vertical-align: top;
+        padding: 0 5px;
+
+        -webkit-box-flex: 1;   /* OLD - iOS 6-, Safari 3.1-6 */
+        -webkit-flex: 1;       /* Safari 6.1+. iOS 7.1+, BB10 */
+        -ms-flex: 1;           /* IE 10 */
+        flex: 1;               /* NEW, Spec - Firefox, Chrome, Opera */
+        
+        margin-top: 0;
+        margin-right: 10px;
+        min-height: 30px;
+	}
+}
+.Progress-tri {
+	width: 0;
+    height: 0;
+    border-style: solid;
+    
+    border-width: 8.8px 5px 0 5px;
+    border-color: #A6ACB2 transparent transparent transparent;
+    position: absolute;
+    
+    top: 80px;
+    left: -19px;
+
+}
+@media all and (min-width: 600px){
+    .Progress-tri {
+    	border-width: 5px 0 5px 8.7px;
+        border-color: transparent transparent transparent #A6ACB2;
+        top: -14px;
+        left: auto;
+        right: -5px;
+        
+    }
+}
+
+.Progress-labelSidenote {
+	position: absolute;
+	top: 0px;
+  	left: -26px;
+  	width: 14px;
+
+	font-size: 14px;
+	padding-left: 5px;
+	padding-bottom: 1px;
+	color: rgb(100,100,100);
+	
+}
+.Progress-labelSidenote:before {
+	content: '';
+	position: relative;
+	top: 6px;
+	left: -5px;
+	
+}
+
+@media all and (min-width: 600px){  
+    .Progress-labelSidenote {
+    	top: -30px;
+    	left: 5px;
+    	width: 100%;
+    	border-bottom: 1px solid rgb(200,200,200);
+  
+    }
+    .Progress-labelSidenote:before {
+    	
+    	top: 6px;
+    	left: -5px;
+    	border-left: 1px solid rgb(200,200,200);
+    }
+}
+
+.Progress-label {
+	margin-left: 10px; 
+}
+@media all and (min-width: 600px){
+	.Progress-label {
+		width: auto;
+		background: rgb(200,200,200);
+        position: relative;
+	    text-align: center;
+	    left:0; 
+	    margin: 0;  
+	}
+    .Progress-label:before {
+    	content: '';
+    	position: absolute;
+    	top: 0px;
+    	right: -10px;
+    	border-top: 11px solid white;
+    	border-bottom: 11px solid white;
+    	border-left: 11px solid rgb(200,200,200);
+    }
+}
+.Progress-point {
+	-webkit-box-flex: 0 0 44px;   /* OLD - iOS 6-, Safari 3.1-6 */
+    -webkit-flex: 0 0 44px;       /* Safari 6.1+. iOS 7.1+, BB10 */
+    -ms-flex: 0 0 44px;           /* IE 10 */
+	flex: 0 0 44px;
+
+	position: relative;
+	margin-top: 30px;
+}
+.Progress-circle {
+	background: none;
+	padding: 0 5px;
+	margin-left: 10px;
+}
+
+@media all and (min-width: 600px){
+    .Progress-point {
+    	position: relative;
+    	margin: 0;
+    }
+    .Progress-circle {
+    	display: block;
+    	border-radius: 50%;
+    	background: rgb(220,220,220);
+    	width: 40px;
+    	height: 40px;
+    	font-size: 14px;
+    	padding-top: 10px;
+        text-align: center;
+        margin: 0 5px 0 0;
+        position: absolute;
+        top: -8px;
+    }
+}
+
+.Progress-unitPoint {
+	background: rgb(136,0,19);
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	position: absolute;
+	top: 5px;
+	left: -5px;
+}
+@media all and (min-width: 600px){
+	.Progress-unitPoint {
+		display: none;
+	}
+
+}
+
+
+/* ====================================================================== */
+/* ====================================================================== */
+/* ====================================================================== */
+
+
+
+.Progress-issue {
+	background: white;
+    //border: 1px solid rgb(220,220,220);
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.12);
+   
+    display: inline-block;
+    
+    cursor: pointer;
+    margin: 2px;
+    padding: 8px;
+    width: 100%;
+    
+    position: relative;
+}
+@media all and (min-width: 600px){
+    .Progress-issue {
+        text-align: center;
+    }
+}
+.Progress-issueRow {
+    background: white;
+    //border: 1px solid rgb(220,220,220);
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.12);
+    display: inline-block;
+    
+    cursor: pointer;
+    margin: 2px;
+    padding: 8px;
+    width: 100%;
+    border-left: 5px solid white;
+
+    position: relative;
+        
+}
+
+@media all and (min-width: 600px){
+	.Progress-issue {
+		margin: 0px 0px 5px 2px;
+
+		display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+        display: -ms-flexbox;  /* TWEENER - IE 10 */
+        display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+        display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+		
+		width: auto;
+    }
+}
+.Progress-issue.is-hovered {
+	background: rgb(247,227,214);
+    //border: 4px solid rgb(247,227,214);;
+}
+.Progress-issueRow.is-hovered {
+    background: rgb(247,227,214);
+}
+@media all and (min-width: 600px){
+    .Progress-issue.is-focused {
+    	background: rgb(247,227,214);
+    }
+    .Progress-issueRow.is-focused {
+        border-left: 5px solid rgb(139, 0, 19);
+        background: rgb(247,227,214);
+    }
+}
+.Progress-issueLeft {
+	font-size: 24px;
+	font-weight: 800;
+    text-align: center;
+
+    -webkit-box-flex: 0 0 30px;   /* OLD - iOS 6-, Safari 3.1-6 */
+    -webkit-flex: 0 0 30px;       /* Safari 6.1+. iOS 7.1+, BB10 */
+    -ms-flex: 0 0 30px;           /* IE 10 */
+    flex: 0 0 30px;
+    color: rgb(120,120,120);
+	
+}
+.Progress-issue:hover > .Progress-issueLeft, .Progress-issue.is-focused >
+.Progress-issueLeft {
+    color: white;
+    padding-left: 2px;
+}
+
+.Progress-issueMain {
+	flex: 1;
+	padding: 4px 2px 2px 0px;
+	//border-left: 5px solid white;
+    z-index: 10;
+}
+.Progress-issueMainTitle {
+    font-weight: 700;
+    z-index: 10;
+}
+
+.Progress-link, .Progress-link:visited {
+    color: black;
+    text-decoration: none;
+}
+
+
+
+/* ====================================================================== */
+/* ====================================================================== */
+/* ====================================================================== */
+
+
+
+
+
+
+.Progress-versionItem:hover {
+    border-color: rgb(152, 39,45);
+}
+.Progress-versionItem {
+    display: block;
+    border: 1px solid;
+    background: white;
+    border-radius: 5px;
+    margin: 2px;
+    padding: 0 4px;
+}
+@media all and (min-width: 600px){
+    .Progress-versionItem {
+        display: inline-block;
+        border: 1px solid;
+        background: white;
+        border-radius: 5px;
+        margin: 2px;
+        text-align: center;
+
+    }
+}
+.Progress-avatarImg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.Progress-avatarName {
+    vertical-align: top;
+    display: inline-block;
+    padding-top: 12px;
+}
+@media all and (min-width: 750px){
+    .Progress-versionItem {
+        padding: 2px;
+    }
+    .Progress-avatarName {
+        margin-left: 4px;
+        padding-top: 12px;
+    }
+}
+@media all and (min-width: 800px){
+    .Progress-versionItem {
+        padding: 4px 10px;
+    }
+}
+@media all and (max-width: 400px){
+    .Progress-avatarName {
+        padding-top: 12px;
+    }
+}
+.Progress-avatarHoverInfo {
+    text-align: left;
+    font-size: 14px;
+}
+
+
