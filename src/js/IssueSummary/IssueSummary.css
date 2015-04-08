@@ -1,0 +1,46 @@
+.IssueSummary {
+	text-align: left;
+	margin: 0 auto;
+	max-width: 820px;
+	padding: 0 5px;
+}
+.IssueSummary-title {
+	font-weight: 800;
+	font-size: 24px;
+	margin: 30px 0;
+	//border-left: 8px solid rgb(139, 0, 19);
+	border-left: 8px solid rgb(152, 39,45);
+    padding-left: 8px;
+
+}
+.IssueSummary-item {
+	display: flex;
+	margin: 12px 0;
+	align-items: flex-start;
+	
+}
+.IssueSummary-itemLeft {
+	-webkit-box-flex: 0 0 80px;   /* OLD - iOS 6-, Safari 3.1-6 */
+    -webkit-flex: 0 0 80px;       /* Safari 6.1+. iOS 7.1+, BB10 */
+    -ms-flex: 0 0 80px;           /* IE 10 */
+	flex: 0 0 80px;
+	color: rgb(139, 0, 19);
+	font-weight: 800;
+
+}
+.IssueSummary-itemMain {
+	-webkit-box-flex: 1;   /* OLD - iOS 6-, Safari 3.1-6 */
+    -webkit-flex: 1;       /* Safari 6.1+. iOS 7.1+, BB10 */
+    -ms-flex: 1;           /* IE 10 */
+    flex: 1;               /* NEW, Spec - Firefox, Chrome, Opera */
+    line-height: 1.6;
+     
+}
+.IssueSummary-note {
+	font-size: 12px;
+}
+.IssueSummary-link, .IssueSummary-link:visited {
+    color: rgb(53,55,54);
+    text-decoration: none;
+    
+}

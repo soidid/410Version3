@@ -17,15 +17,21 @@
 	font-size: 30px;
 	font-weight: 800;
 }
+.App-figure {
+	position: relative;
+	margin-top: 50px;
+}
 .App-progress {
 	position: absolute;
 	left: 0;
 	top: -20px;
 	width: 100%;
+	padding-top: 50px;
 }
 @media screen and (min-width: 600px){
 	.App-progress {
 		position: relative;
+
 	}
 
 }
@@ -33,6 +39,7 @@
 	text-align: left;
 	display: flex;
 	margin-left: 60px;
+    margin-bottom: 50px;
 }
 .App-billVersion {
 	flex: 1;
@@ -40,6 +47,7 @@
 @media screen and (min-width: 600px){
 	.App-billVersions {
 	   display: block;
+	   border-bottom: 1px solid;
 	}
 	.App-billVersion {
 		flex: none;

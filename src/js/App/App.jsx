@@ -20,6 +20,7 @@ var levelData = require("../../data/level");
 var Progress = require('../Progress/Progress.jsx');
 var Intro = require('../Intro/Intro.jsx');
 var BillVersion = require('../BillVersion/BillVersion.jsx');
+var IssueSummary = require('../IssueSummary/IssueSummary.jsx');
 
 require('./App.css');
 
@@ -40,20 +41,28 @@ var App = React.createClass({
             )
         })
         return (
-          <div className="App-billVersions" 
-               key={key}>{versionItems}</div>
+          <div className="App-block">
+              
+              <IssueSummary data={item} />
+              <div className="App-figure">
+                  <div className="App-progress">
+                    <Progress legiProcess={data.legiProcess}
+                              levelData={levelData} />
+                  </div>
+                  <div className="App-billVersions" 
+                       key={key}>{versionItems}
+                  </div>
+              </div>
+          </div>
         );
     })):"";
 
     var result = (data) ? (
         <div className="App"
              id="App">
-            <div className="App-block">
-                <div className="App-progress">
-                <Progress legiProcess={data.legiProcess}
-                          levelData={levelData} /></div>
+            
                 {issueItems}
-            </div>
+            
              
         </div>
         ):<div className="App">網址錯誤</div>;

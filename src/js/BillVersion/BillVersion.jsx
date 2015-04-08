@@ -99,7 +99,7 @@ var BillVersion = React.createClass({
           <div className="BillVersion-progressBar"
                style={progressStyle}>
           </div>
-          <div className={dayCountClasses}>停留 129 天</div>
+          
           <div className="BillVersion-summary">{data.summary}</div>
           
       </div>
