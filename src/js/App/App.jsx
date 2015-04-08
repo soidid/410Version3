@@ -24,7 +24,7 @@ var BillVersion = require('../BillVersion/BillVersion.jsx');
 require('./App.css');
 
 var App = React.createClass({
-  
+
   render () {
    
     // traverse through issues 不同訴求

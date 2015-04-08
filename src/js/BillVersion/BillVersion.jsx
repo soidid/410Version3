@@ -18,37 +18,47 @@ var BillVersion = React.createClass({
     });
  
   },
-  componentDidMount(){
-      var { data, levelData } = this.props;
 
-      var baselineIndex = levelData["baseline"];
-      var baseline = document.getElementById(levelData[baselineIndex]);
-      var ref = document.getElementById(levelData[data.stage]);
-      var wrapper = document.getElementById("App");
-     
+  _renderFigure(){
+    var { data, levelData } = this.props;
 
-      if(ref){
-          
-          var baselineRect = baseline.getBoundingClientRect();
-          var refRect = ref.getBoundingClientRect();
-          var wrapperRect = wrapper.getBoundingClientRect();
-          var ratio = (window.innerWidth > 1000) ? wrapperRect.right / (1000-80) : 1;
-          
-          var length = 0;
+    var baselineIndex = levelData["baseline"];
+    var baseline = document.getElementById(levelData[baselineIndex]);
+    var ref = document.getElementById(levelData[data.stage]);
+    var wrapper = document.getElementById("App");
+    
+    if(ref){
+        
+        var baselineRect = baseline.getBoundingClientRect();
+        var refRect = ref.getBoundingClientRect();
+        var wrapperRect = wrapper.getBoundingClientRect();
+        var ratio = (window.innerWidth > 1000) ? wrapperRect.right / (1000-80) : 1;
+        
+        var length = 0;
 
-          if(window.innerWidth > 600){
-            length = ((refRect.right-baselineRect.left)-(refRect.width/2)) / ratio;
+        if(window.innerWidth > 600){
+          length = ((refRect.right-baselineRect.left)-(refRect.width/2)) / ratio;
 
-          }else{
-            length = (refRect.bottom-baselineRect.top);
-          }
+        }else{
+          length = (refRect.bottom-baselineRect.top);
+        }
 
-          this.setState({
-            length: length
-          });
-          
-      }
+        this.setState({
+          length: length
+        });
+        
+    }
   },
+
+  componentDidMount () {
+      this._renderFigure();
+      window.addEventListener("resize", this._renderFigure);
+  },
+  
+  componentWillUnmount () {
+      window.removeEventListener("resize", this._renderFigure);
+  },
+  
   render () {
     var { data, levelData } = this.props;
     var classSet = React.addons.classSet;
