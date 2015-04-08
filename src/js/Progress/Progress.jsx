@@ -9,7 +9,7 @@ var Progress = React.createClass({
   
   
   render () {
-    var {  legiProcess, levelData } = this.props;
+    var {  legiProcess, levelData, legendHeight } = this.props;
     var state = this.state;
     var classSet = React.addons.classSet;
   
@@ -18,6 +18,11 @@ var Progress = React.createClass({
       ================== */
     var issueCount = 0;
   	var progressItems = legiProcess.map((item,key)=>{
+        
+        var legendBorderStyle = {
+            "height" : legendHeight
+        }
+        
         var itemClasses = classSet({
           "Progress-item" : item.type === "challenge" ,
           "Progress-point" : item.type === "point"
@@ -37,6 +42,7 @@ var Progress = React.createClass({
         // : "";
         return (
            <div className={itemClasses}
+                style={legendBorderStyle}
                 key={key}
                 id={levelData[item.stage]}
                 ref={levelData[item.stage]}>

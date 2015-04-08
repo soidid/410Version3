@@ -75,7 +75,7 @@ var BillVersion = React.createClass({
       };
     }
 
-    console.log(progressStyle);
+    //console.log(progressStyle);
 
     var billVersionClasses = classSet({
       "BillVersion" : true,
@@ -89,7 +89,8 @@ var BillVersion = React.createClass({
  
     var boundEntering = this._onHover.bind(null, true);
     var boundLeaving = this._onHover.bind(null, false);
-
+    
+    var summary = ( data.summary.length > 30 ) ? data.summary.substring(0,30)+"...":data.summary;
     return (
       
       <div className={billVersionClasses}
@@ -100,8 +101,8 @@ var BillVersion = React.createClass({
                style={progressStyle}>
           </div>
           
-          <div className="BillVersion-summary">{data.summary}</div>
-          
+          <div className="BillVersion-summary">{summary}</div>
+
       </div>
           
     );
