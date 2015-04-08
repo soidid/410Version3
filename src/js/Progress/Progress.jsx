@@ -40,7 +40,21 @@ var Progress = React.createClass({
         //   <div className="Progress-tri"></div>
         // </div>
         // : "";
-        return (
+        return (window.innerWidth > 600)?(
+           <div className={itemClasses}
+                style={legendBorderStyle}
+                key={key}
+                id={levelData[item.stage]}
+                ref={levelData[item.stage]}>
+                <div className="Progress-unitPoint" />
+                  
+                <div className={lableClasses}>
+                  <div>{item.stage}</div>
+                </div>
+                
+           </div>
+        ):
+        (
            <div className={itemClasses}
                 key={key}
                 id={levelData[item.stage]}
