@@ -76,16 +76,28 @@
 }
 .App-billVersions {
 	text-align: left;
-	display: flex;
+	display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
 	margin-left: 60px;
     margin-bottom: 50px;
 }
 .App-billVersion {
-	flex: 0 0 30px;
+	
+	-webkit-box-flex:  0 0 30px;   /* OLD - iOS 6-, Safari 3.1-6 */
+    -webkit-flex:  0 0 30px;       /* Safari 6.1+. iOS 7.1+, BB10 */
+    -ms-flex:  0 0 30px;           /* IE 10 */
+    flex:  0 0 30px;               /* NEW, Spec - Firefox, Chrome, Opera */
+
 }
 @media screen and (min-width: 400px){
     .App-billVersion {
-    	flex: 1;
+    	-webkit-box-flex: 1;   /* OLD - iOS 6-, Safari 3.1-6 */
+        -webkit-flex: 1;       /* Safari 6.1+. iOS 7.1+, BB10 */
+        -ms-flex: 1;           /* IE 10 */
+        flex: 1;               /* NEW, Spec - Firefox, Chrome, Opera */
+    	
     }
 }
 @media screen and (min-width: 600px){
@@ -94,7 +106,11 @@
 	   border-bottom: 1px solid;
 	}
 	.App-billVersion {
-		flex: none;
+		
+		-webkit-box-flex: none;   /* OLD - iOS 6-, Safari 3.1-6 */
+        -webkit-flex: none;       /* Safari 6.1+. iOS 7.1+, BB10 */
+        -ms-flex: none;           /* IE 10 */
+        flex: none;               /* NEW, Spec - Firefox, Chrome, Opera */
 	}
 }
 
