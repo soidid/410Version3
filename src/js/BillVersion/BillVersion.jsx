@@ -26,9 +26,7 @@ var BillVersion = React.createClass({
     var baseline = document.getElementById(levelData[baselineIndex]);
     var ref = document.getElementById(levelData[data.stage]);
     var wrapper = document.getElementById("App");
-    console.log("ref: ");
-    console.log(ref);
-
+    
     if(ref){
         
         var baselineRect = baseline.getBoundingClientRect();
@@ -64,11 +62,11 @@ var BillVersion = React.createClass({
 
   componentDidMount () {
       this._renderFigure();
-      window.addEventListener("resize", this._renderFigure);
+      //window.addEventListener("resize", this._renderFigure);
   },
   
   componentWillUnmount () {
-      window.removeEventListener("resize", this._renderFigure);
+      //window.removeEventListener("resize", this._renderFigure);
   },
   
   render () {
