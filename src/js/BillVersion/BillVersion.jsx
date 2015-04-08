@@ -36,10 +36,10 @@ var BillVersion = React.createClass({
         
         var length = 0;
 
-        console.log(ref);
-        console.log(refRect);
-        console.log(baseline);
-        console.log(baselineRect);
+        // console.log(ref);
+        // console.log(refRect);
+        // console.log(baseline);
+        // console.log(baselineRect);
 
         if(window.innerWidth > 600){
           length = ((refRect.right-baselineRect.left)-(refRect.width/2)) / ratio;
@@ -54,7 +54,7 @@ var BillVersion = React.createClass({
           length: length
         });
 
-        console.log("_renderFigure:"+length);
+        //console.log("_renderFigure:"+length);
 
         
     }

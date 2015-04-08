@@ -31,7 +31,9 @@ var App = React.createClass({
     return {
        currentIndex: 3,
        touchStartX: null,
+       touchStartY: null,
        touchEndX: null,
+       touchEndY: null,
        max: 5 // MaxIndex = data.length-1
     }
   },
@@ -42,18 +44,21 @@ var App = React.createClass({
 
   _onTouchStart(event){
     this.setState({
-      touchStartX: event.touches[0].clientX
+      touchStartX: event.touches[0].clientX,
+      touchStartY: event.touches[0].clientY
     });
   },
+
   _onTouchEnd(event){
     var state = this.state;
     var moveX = state.touchEndX - state.touchStartX;
+    var moveY = state.touchEndY - state.touchStartY;
    
     currentIndex = state.currentIndex;
 
-    
+    //console.log("x:"+Math.abs(moveX)+", y:"+Math.abs(moveY));
     // 40 is threshold
-    if(Math.abs(moveX) < 40){
+    if(Math.abs(moveX) < 40 || Math.abs(moveY) > 50){
        return;
 
     }
@@ -78,7 +83,8 @@ var App = React.createClass({
   
   _onTouchMove(event){
     this.setState({
-      touchEndX: event.touches[0].clientX
+      touchEndX: event.touches[0].clientX,
+      touchEndY: event.touches[0].clientY
     });
   },
 
