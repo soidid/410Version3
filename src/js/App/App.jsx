@@ -51,8 +51,13 @@ var App = React.createClass({
    
     currentIndex = state.currentIndex;
 
-    // Slide Direction
+    
+    // 40 is threshold
+    if(Math.abs(moveX) < 40){
+       return;
 
+    }
+    // Slide Direction
     if(moveX > 0){//toggle Prev
         currentIndex = currentIndex -1;
         if(currentIndex < 0)
@@ -106,6 +111,7 @@ var App = React.createClass({
         }
         var legendBorderStyle = {
             "height" : legendHeight - 40
+
         }
 
         //下方各版本

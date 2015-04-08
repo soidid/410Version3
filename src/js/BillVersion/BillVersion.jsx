@@ -26,7 +26,9 @@ var BillVersion = React.createClass({
     var baseline = document.getElementById(levelData[baselineIndex]);
     var ref = document.getElementById(levelData[data.stage]);
     var wrapper = document.getElementById("App");
-    
+    console.log("ref: ");
+    console.log(ref);
+
     if(ref){
         
         var baselineRect = baseline.getBoundingClientRect();
@@ -36,16 +38,26 @@ var BillVersion = React.createClass({
         
         var length = 0;
 
+        console.log(ref);
+        console.log(refRect);
+        console.log(baseline);
+        console.log(baselineRect);
+
         if(window.innerWidth > 600){
           length = ((refRect.right-baselineRect.left)-(refRect.width/2)) / ratio;
+          
 
         }else{
           length = (refRect.bottom-baselineRect.top);
+          
         }
 
         this.setState({
           length: length
         });
+
+        console.log("_renderFigure:"+length);
+
         
     }
   },
@@ -81,6 +93,7 @@ var BillVersion = React.createClass({
       "BillVersion" : true,
       "is-hovered" : this.state.isHovered
     });
+
     var dayCountClasses = classSet({
       "BillVersion-dayCount" : true,
       "is-show" : this.state.length > 0,

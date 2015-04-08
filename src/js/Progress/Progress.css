@@ -90,6 +90,7 @@
         height: 330px;
         動態決定
         */ 
+        height: 330px;
         z-index: 100;
         pointer-events: none;
 	}
@@ -212,6 +213,7 @@
         height: 330px;
         動態決定
         */ 
+        height: 330px;
         z-index: 100;
         pointer-events: none;
     }

@@ -170,7 +170,6 @@ module.exports = {
           "title":"降低連署門檻",
           "titleFull" : "公民投票連署門檻降至百分之一・五",
           "currentLaw" : "依據《公民投票法》第12條：連署人數應達到最近一次總統大選選舉人總數百分之五以上",
-          "progress" : "委員會待審",
           "proposedBill" : [
               {
                   "proposer" : "葉宜津",
@@ -224,7 +223,6 @@ module.exports = {
           "title":"建立電子提案及連署系統",
           "titleFull" : "建立電子提案及連署系統",
           "currentLaw" : "依據《公民投票法》第9、10條：提案或連署人需要親筆簽名，並註明身分證字號及戶籍地址。完成後將紙本送交中選會提出",
-          "progress" : "程序委員會",
           "proposedBill" : [
               { 
                     "proposer" : "鄭麗君",
@@ -242,7 +240,6 @@ module.exports = {
           "title":"廢除50%投票門檻",
           "titleFull" : "廢除百分之五十投票門檻，改採簡單多數決",
           "currentLaw" : "依據《公民投票法》第30條：公民投票案投票結果，投票人數達全國、直轄市、縣 (市) 投票權人總數二分之一以上，且有效投票數超過二分之一同意者，即為通過",
-          "progress" : "委員會待審",
           "proposedBill" : [
               { 
                 "proposer" : "葉宜津",
