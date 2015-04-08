@@ -3,20 +3,52 @@
 	position: relative;
 	max-width: 1000px;
 	margin: 0 auto;
-	
+
+}
+.App-block {
+	background: white;
+	padding: 5px 10px 20px 0;
+	margin: 10px 5px;
+	box-shadow: 2px 2px 4px 0 rgba(0,0,0,0.12);
 }
 @media screen and (min-width: 600px){
     .App {   
 	   text-align: center;
+	   padding: 10px 0;
     }
     .App-block {
+    	padding: 20px 10px 20px 0;
 		margin-top: 50px;
     }
 }
-.App-title {
-	font-size: 30px;
-	font-weight: 800;
+.App-section {
+	max-width: 820px;
+	margin: 40px auto 20px auto;
+	text-align: left;
+	line-height: 1.6;
 }
+.App-meta {
+	font-size: 12px;
+    text-align: center;
+    border: 1px solid rgb(120,120,120);
+    display: inline-block;
+    padding: 2px 20px;
+    color: rgb(53,55,54);
+}
+.App-mainTitle {
+	font-size: 24px;
+	font-weight: 800;
+	line-height: 1;
+}
+.App-sectionTitle {
+	font-size: 20px;
+	font-weight: 800;
+	margin: 5px;
+	padding-left: 8px;
+	border-left: 8px solid rgb(152, 39,45);
+	
+}
+
 .App-figure {
 	position: relative;
 	margin-top: 50px;
@@ -31,9 +63,7 @@
 @media screen and (min-width: 600px){
 	.App-progress {
 		position: relative;
-
 	}
-
 }
 .App-billVersions {
 	text-align: left;
@@ -42,7 +72,12 @@
     margin-bottom: 50px;
 }
 .App-billVersion {
-	flex: 1;
+	flex: 0 0 30px;
+}
+@media screen and (min-width: 400px){
+    .App-billVersion {
+    	flex: 1;
+    }
 }
 @media screen and (min-width: 600px){
 	.App-billVersions {

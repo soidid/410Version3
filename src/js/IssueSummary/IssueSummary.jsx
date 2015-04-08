@@ -15,7 +15,7 @@ var IssueSummary = React.createClass({
     
     return (
       <div className="IssueSummary">
-          <div className="IssueSummary-title">{data.title}</div>
+          
           <div className="IssueSummary-item">
                 <div className="IssueSummary-itemLeft">民團訴求</div>
                 <div className="IssueSummary-itemMain">{data.titleFull}</div>

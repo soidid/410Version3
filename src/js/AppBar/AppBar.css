@@ -1,0 +1,15 @@
+.AppBar {
+	position: fixed;
+    top: 5px;
+    left: 5px;
+    width: 100px;
+    padding: 4px 10px;
+    color: white;
+    font-weight: 800;
+    box-shadow: 5px 5px 0 0 rgba(230,230,230,1);
+    background: rgb(152, 39,45);
+    cursor: pointer;
+}
+.AppBar:hover {
+	box-shadow: 5px 5px 0 0 rgba(0,0,0,0.2);
+}
